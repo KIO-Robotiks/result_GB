@@ -13,12 +13,14 @@
 *Так как в задании не был указан язык программирования, на котором требуется осуществить задачу, я выбрал язык Python:*
 ```python
 def get_small_array(array):
+    small_array = []
     for i in array:
-        if len(i) > 3:
-            array.remove(i)
+        if len(i) <= 3:
+            small_array.append(i)
+    return small_array
 
-
-print("Программа принимает массив из строк и воводит массив из тех строк, у которых длинна <= 3 символа")
+print("Программа принимает массив из строк\
+     и воводит массив из тех строк, у которых длинна <= 3 символа")
 print("Зададим массив..")
 array = []
 count = 1
@@ -30,6 +32,5 @@ while 1:
         array.append(i)
     count +=1
 
-get_small_array(array)
-print(array)
+print(get_small_array(array))
 ```
